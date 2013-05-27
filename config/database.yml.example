@@ -1,0 +1,15 @@
+development: &dev
+  adapter: postgresql
+  encoding: unicode
+  database: xstore_dev
+  pool: 5
+  username: xstore
+  password:
+
+test:
+  <<: *dev
+  database: sxtore_test
+
+production:
+  <<: *dev
+  database: sxtore_prod
